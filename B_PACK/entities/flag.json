@@ -1,0 +1,42 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "ibx:flag",
+      "spawn_category": "creature",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+
+    "components": {
+      
+      "minecraft:type_family": {
+        "family": [ "inanamate" ]
+      },  
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 2.0
+      },
+      "minecraft:persistent": {
+      },
+      "minecraft:physics": {
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      },
+
+      "minecraft:health": {
+        "max": 1,
+        "value": 1
+      },
+
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": {
+          "filters": { "test": "in_lava", "subject": "self", "operator": "==" },
+          "cause": "lava",
+          "damage_per_tick": 1
+        }
+      }
+    }
+  }
+}
